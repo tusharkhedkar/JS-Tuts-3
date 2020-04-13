@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        body {
+            background-color: #167e9e;
+            font-family: source-sans-pro, sans-serif;
+        }
+
+        h1 {
+            margin-left: auto;
+            margin-top: 50px;
+            text-align: center;
+            font-weight: 100;
+            font-size: 2.8em;
+            color: #ffffff;
+        }
+
+        div {
+            width: 500px;
+            margin: auto;
+        }
+
+        .formStyle {
+            background-color: #2f8ca8;
+            padding: 20px;
+            width: 400px;
+            margin-bottom: 20px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #ecf0f1;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            font-size: 1em;
+            font-weight: 100;
+            color: #ffffff;
+        }
+
+        .formButton {
+            float: right;
+            background-color: #ffffff;
+            display: inline-block;
+            color: #2ecc71;
+            font-size: 28px;
+            font-weight: 500;
+            padding: 6px 24px;
+            margin-top: 15px;
+            margin-right: 60px;
+            text-decoration: none;
+        }
+
+        .formButton:hover {
+            background-color: #27ae60;
+            color: #ffffff;
+        }
+
+        .formButton:active {
+            position: relative;
+            top: 3px;
+        }
+
+        /*To remove the outline that appears on clicking the input textbox*/
+        input:focus {
+            outline: none;
+        }
+
+        .toggleContainer {
+            display: none;
+        }
+        /* To format the placeholder text color */
+        ::-webkit-input-placeholder {
+            color: #ecf0f1;
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: #ecf0f1;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #ecf0f1;
+        }
+
+        :-ms-input-placeholder {
+            color: #ecf0f1;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Project Details Form
+        </h1>
+
+        <div>
+            <form>
+                    <input type="text" name="name" id="ID" class="formStyle" placeholder="Project ID (required)" required />
+                    <input type="text" name="pname" id="name" class="formStyle" placeholder="Name (required)" required />
+
+                <select name="" id="status" class="formStyle">
+                    <option selected="selected" disabled>Status</option>
+                    <option value="New">New</option>
+                    <option value="In progress">In progress</option>
+                    <option value="Complete">Completed</option>
+                    <option value="On Hold">On hold</option>
+                </select>
+                <textarea  class="formStyle" id="description" id="exampleFormControlTextarea1" 
+                placeholder="Describe here..." rows="2"></textarea>
+            
+                <a  class="formButton">Subscribe</a>
+            </form>
+            <div id="showCountDiv" style="position : absolute; right: 70px;">
+                    <button id="showCount" style="float:right">SHow Count</button>
+            </div>
+            
+        </div>
+
+        <button id = "showProjects">Show Projects</button>
+        
+        <div class="container mt-5 toggleContainer" id="proContainer" >
+            <h2>Projects</h2>
+            <p>Following are the projects detailed summary...</p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Project ID</th>
+                        <th>Project Name</th>
+                        <th>Status</th>
+                        <th>description</th>
+                    </tr>
+                </thead>
+                <tbody class="tableBody"> 
+                    <!-- <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                        <td>...</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="./app.js"></script>
+        <script src="./main.js"></script>
+</body>
+
+</html>
